@@ -1,0 +1,295 @@
+/* ==========================================================================
+   SASS VARIABLES AND MIXINS
+   ========================================================================== */
+
+  //SASS
+  $white:     #FFFFFF;
+  $grey:      #F5F5F5;
+  $grey1:     #DCDCDC;
+  $grey2:     #ABABAB;
+  $grey3:     #7A7A7A;
+  $sky:       #F2F7FA;
+  $blue:      #479CCF;
+  $green:     #96BF48;
+  $asphalt:    #666666;
+  $slate:     #2D3538;
+  $black:     #000000;
+  $red:       #BF4848;
+  $purple:    #EC6AE1;
+
+  $font-stack:    Helvetica, sans-serif;
+  $primary-color: #333;
+
+  @media only screen and (min-width: 768px) and (max-width: 1026px){}
+  @media only screen and (min-width: 600px) and (max-width: 797px){}
+  @media only screen and (min-width: 510px) and (max-width: 629px) {}
+  @media only screen and (max-width: 509px){}  
+
+/* ==========================================================================
+   CSS
+   ========================================================================== */
+
+body, html {
+  width:100%;
+  font-size:100%;
+  padding:0px;
+  margin:0px;
+  font-family:"Trebuchet MS", Helvetica, sans-serif;
+  color: $slate;
+  background-color: #FCFCFC;
+}
+
+  /* Position */
+  /* Display & Box Model */
+  /* Color */
+  /* Text */
+  /* Other */
+
+.multi-chat{
+  width:100%;
+  position:absolute;
+  bottom:0;
+}
+
+.multi-chat > section{
+  height:50%;
+  opacity:1;
+  box-sizing: border-box;
+  display: block;
+  float: left;
+  font-size:0.8rem;
+  border-right:1px solid $grey1;
+  cursor:pointer;
+}
+
+.multi-chat .chat-meta,
+.multi-chat .chat-content{
+  height:100%;
+  width:100%;
+  display:block;
+}
+
+.multi-chat .chat-messages{
+  opacity:.45;
+}
+
+.four > section{
+  width: 20%;
+}
+
+.five > section{
+  width: 16.25%;
+}
+
+.six > section{
+  width: 33.333333%;
+}
+
+/* Chat Msgs */
+
+.multi-chat section.is-focused{
+  opacity:1;
+  font-size:.9rem;
+  cursor:default;
+  border:1px solid $asphalt;
+}
+
+.four section.is-focused{
+  width:40%;
+}
+
+.five section.is-focused{
+  width:35%;
+}
+
+section.is-focused .chat-messages{
+  opacity:1;
+}
+
+.header-name.msg-missed:before{
+  content:'';
+  display:inline-block;
+  width:10px;
+  height:10px;
+  border-radius:5px;
+  background-color:$blue;
+  margin-right:5px;
+}
+
+.multi-chat .chat-messages{
+  height:400px;
+  padding:0 20px;
+  border-top:1px solid $grey1;
+  margin:0;
+  list-style:none;
+  overflow-y:scroll;
+  background-color:#fff;
+}
+
+@media only screen and (min-height: 700px){.multi-chat .chat-messages{ height:500px}}
+@media only screen and (min-height: 800px){.multi-chat .chat-messages{ height:600px}}
+@media only screen and (min-height: 1000px){.multi-chat .chat-messages{ height:800px}}
+@media only screen and (min-height: 1200px){.multi-chat .chat-messages{ height:1000px}}
+
+.multi-chat .chat-messages li{
+  margin-bottom:1rem;
+  line-height:1.6em;
+}
+
+.multi-chat .chat-messages li:first-of-type{
+  margin-top:2rem;
+}
+
+section.is-focused .chat-messages{
+  height:544px;
+}
+
+.name{
+  font-weight:bold;
+}
+
+.merchant .msg{
+  color:$blue;
+}
+
+.merchant{
+  color:$blue;
+}
+
+
+.merchant-name:after{
+  content:'';
+}
+
+.is-focused .merchant-name:after{
+  content:'';
+}
+
+.agent-name:after{
+  content:''
+}
+
+.is-focused .agent-name:after{
+  content:'';
+}
+
+/* Chat Meta */
+
+.multi-chat .chat-meta{
+  background-color:$slate;
+  display:none;
+}
+
+.meta-buttons{
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+.meta-buttons li{
+  display:block;
+  height:50px;
+  line-height:50px;
+  float:left;
+  color:white;
+  -webkit-font-smoothing:antialiased;
+}
+
+.meta-buttons .large:first-of-type{
+  width:150px;
+  box-sizing:border-box;
+}
+
+.meta-buttons .large{
+  width:100px;
+  text-align:center;
+  float:left;
+}
+
+.meta-buttons .small{
+  width:60px;
+  float:right;
+}
+
+.meta-buttons .admin{
+  background-color:red;
+}
+
+.meta-buttons .view-shop{
+  background-color:blue;
+}
+
+.meta-buttons .dashboard{
+  background-color:green;
+}
+
+section.is-focused .chat-meta{
+  display:block;
+}
+
+.header-name{
+  height:50px;
+  line-height:50px;
+  border-top:1px solid $grey1;
+  text-align:center;
+}
+
+section.is-focused .header-name{
+  display:none;
+}
+
+.multi-chat .meta-content{
+  display:none;
+  margin:0;
+  padding:20px;
+  list-style:none;
+  color:$slate;
+  background-color:$grey1;
+  -webkit-font-smoothing:antialiased;
+  line-height:1.5em;
+
+}
+
+.meta-content.is-open{
+  display:block;
+}
+
+/* Chat Input */
+.msg-input{
+  width:100%;
+  height:0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display:block;
+  opacity:0;
+  border:none;
+}
+
+section.is-focused .msg-input{
+  opacity:1;
+  height:50px;
+  outline:none;
+  border-top:1px solid $asphalt;
+  font-size:0.9rem;
+}
+
+/* helpers */
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
