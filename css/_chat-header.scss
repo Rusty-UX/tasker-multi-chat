@@ -1,0 +1,227 @@
+////////////////////////////////////////////////////////////////////////////////
+//   CHAT HEADER
+////////////////////////////////////////////////////////////////////////////////
+
+.header-name{
+  height:50px;
+  line-height:50px;
+  border-top:1px solid $grey1;
+  background-color:#ECECEC;
+  padding-left:12px;
+}
+
+.header-name .last-msg-time{
+  float:right;
+  padding-right:12px;
+  color:$grey2;
+}
+
+section.is-focused .header-name{
+  display:none;
+}
+
+.header-name.msg-missed:before{
+  content:'';
+  display:inline-block;
+  width:10px;
+  height:10px;
+  border-radius:5px;
+  background-color:$blue;
+  margin-right:5px;
+}
+
+.chat .chat-meta{
+  background-color:$slate;
+  display:none;
+}
+
+.chat .chat-slider{
+  position:relative;
+}
+
+.meta-buttons{
+  list-style:none;  
+  margin:0;
+  padding:0;
+}
+
+.meta-buttons li{
+  display:block;
+  height:50px;
+  line-height:50px;
+  float:left;
+  color:$grey3;
+  cursor:pointer;
+  -webkit-font-smoothing:antialiased;
+}
+
+.meta-buttons li:hover,
+.meta-buttons .toggle.active
+{
+  color:$white !important;
+}
+
+.meta-buttons .tab{
+  padding-left:12px;
+  padding-right:12px;
+  text-align:center;
+  float:left;
+}
+
+.meta-buttons .notepad:after,
+.meta-buttons .tickets:after,
+.meta-buttons .activity-log:after{
+  font-size:20px;
+  font-family:"fontAwesome";
+}
+
+
+.meta-buttons .has-tickets
+{
+  color: $blue !important;
+}
+
+// BUTTON ICONS
+
+.meta-buttons .notepad:after{
+  content:"\f040";
+}
+
+.meta-buttons .tickets:after{
+  content:"\f145";
+}
+
+.meta-buttons .activity-log:after{
+  content:"\f080"; 
+}
+
+//INFO PANEL LABELS
+
+.info li{
+  font-family: 'Trebuchet MS', Helvetica, sans-serif;
+  margin-bottom:0.5rem;
+  margin-left:30px;
+}
+
+.info li.last-in-group{
+  margin-bottom:2rem;
+}
+
+.info li:before{
+  font-family: 'fontAwesome';
+  position:absolute;
+  left:20px;
+  color: $grey3;
+}
+
+.info .info-name:before{
+  content:"\f007";
+  left:22px;
+}
+
+.info .info-email:before{
+  content:"\f003";
+}
+
+.info .info-url:before{
+  content:"\f07a";
+}
+
+.info .info-platform:before{
+  content:"\f109";
+}
+
+.info .info-location:before{
+  content:"\f041";
+  left:23px;
+}
+.info .info-wait:before{
+  content:"\f017";
+}
+
+.info .info-plan:before{
+  content:"\f0b1";
+}
+
+.info .info-gateway:before{
+  content:"\f09d";
+}
+
+.info .info-sales:before{
+  content:"\f0d6";
+}
+
+// SALES
+.info-sales .label-tip{
+  color: $blue;
+}
+
+@media (min-width: 1600px){
+
+  .meta-buttons .notepad:after,
+  .meta-buttons .tickets:after,
+  .meta-buttons .activity-log:after{
+    font-size:14px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+  }
+
+  .meta-buttons .notepad:after{
+    content:"Compose";
+  }
+
+  .meta-buttons .tickets:after{
+    content:"Tickets";
+  }
+
+  .meta-buttons .has-tickets:after{
+    content:"Open tickets";
+  }
+
+  .meta-buttons .activity-log:after{
+    content:"Activity"; 
+  }
+
+}
+
+.meta-buttons .icon-button{
+  padding-right:24px;
+  float:right;
+  overflow:hidden;
+  font-family:'fontAwesome';
+  font-size:20px;
+  text-align:center;
+  line-height:50px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.meta-buttons li:hover{
+  color:white;
+}
+
+.meta-buttons li:active{
+  line-height:53px;
+}
+
+section.is-focused .chat-meta{
+  display:block;
+}
+
+.chat .meta-content{
+  width:100%;
+  display:none;
+  margin:0;
+  padding:20px;
+  position:absolute;
+  list-style:none;
+  color:$slate;
+  background-color:$grey1;
+  -webkit-font-smoothing:antialiased;
+  box-sizing: border-box;:
+  line-height:1.5em;
+
+
+}
+
+.meta-content.is-open{
+  display:block;
+}

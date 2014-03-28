@@ -18,12 +18,12 @@ body, html {
 /* Color */
 /* Text */
 /* Other */
-.multi-chat {
+.chat {
   width: 100%;
   position: absolute;
   bottom: 0; }
 
-.multi-chat > section {
+.chat > section {
   height: 50%;
   opacity: 1;
   box-sizing: border-box;
@@ -33,13 +33,13 @@ body, html {
   border-right: 1px solid gainsboro;
   cursor: pointer; }
 
-.multi-chat .chat-meta,
-.multi-chat .chat-content {
+.chat .chat-meta,
+.chat .chat-content {
   height: 100%;
   width: 100%;
   display: block; }
 
-.multi-chat .chat-messages {
+.chat .chat-messages {
   opacity: .45; }
 
 .four > section {
@@ -52,7 +52,7 @@ body, html {
   width: 33.333333%; }
 
 /* Chat Msgs */
-.multi-chat section.is-focused {
+.chat section.is-focused {
   opacity: 1;
   font-size: .9rem;
   cursor: default;
@@ -76,7 +76,7 @@ section.is-focused .chat-messages {
   background-color: #479ccf;
   margin-right: 5px; }
 
-.multi-chat .chat-messages {
+.chat .chat-messages {
   height: 400px;
   padding: 0 20px;
   border-top: 1px solid gainsboro;
@@ -86,22 +86,22 @@ section.is-focused .chat-messages {
   background-color: #fff; }
 
 @media only screen and (min-height: 700px) {
-  .multi-chat .chat-messages {
+  .chat .chat-messages {
     height: 500px; } }
 @media only screen and (min-height: 800px) {
-  .multi-chat .chat-messages {
+  .chat .chat-messages {
     height: 600px; } }
 @media only screen and (min-height: 1000px) {
-  .multi-chat .chat-messages {
+  .chat .chat-messages {
     height: 800px; } }
 @media only screen and (min-height: 1200px) {
-  .multi-chat .chat-messages {
+  .chat .chat-messages {
     height: 1000px; } }
-.multi-chat .chat-messages li {
+.chat .chat-messages li {
   margin-bottom: 1rem;
   line-height: 1.6em; }
 
-.multi-chat .chat-messages li:first-of-type {
+.chat .chat-messages li:first-of-type {
   margin-top: 2rem; }
 
 section.is-focused .chat-messages {
@@ -129,7 +129,7 @@ section.is-focused .chat-messages {
   content: ''; }
 
 /* Chat Meta */
-.multi-chat .chat-meta {
+.chat .chat-meta {
   background-color: #2d3538;
   display: none; }
 
@@ -180,7 +180,7 @@ section.is-focused .chat-meta {
 section.is-focused .header-name {
   display: none; }
 
-.multi-chat .meta-content {
+.chat .meta-content {
   display: none;
   margin: 0;
   padding: 20px;

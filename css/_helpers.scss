@@ -1,0 +1,14 @@
+////////////////////////////////////////////////////////////////////////////////
+//   HELPERS
+////////////////////////////////////////////////////////////////////////////////
+
+
+// Clearfix
+.cf:before,
+.cf:after { content:" "; display:table; }
+.cf:after {clear: both; }
+
+//Label Tooltip without JS
+.label-tip{ position:relative;}
+.label-tip:before{ margin-top:5px; content: attr(label); position:absolute; display:none; z-index:1000000; font-size:12px; line-height:1.5em; background:$black; color:$white; word-wrap:break-word; white-space:pre; padding:5px 8px; border-radius:3px; top:100%; }
+.label-tip:hover:before{ display:inline-block; }

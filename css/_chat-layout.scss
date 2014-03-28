@@ -1,0 +1,56 @@
+////////////////////////////////////////////////////////////////////////////////
+//   CHAT GENERAL LAYOUT
+////////////////////////////////////////////////////////////////////////////////
+
+body, html {
+  width:100%;
+  font-size:100%;
+  padding:0px;
+  margin:0px;
+  font-family:"Trebuchet MS", Helvetica, sans-serif;
+  color: $slate;
+  background-color: $grey1;
+}
+
+.chat{
+}
+
+.chat > section{
+  max-width:450px;
+  opacity:1;
+  box-sizing: border-box;
+  float: left;
+  font-size:.8rem;
+  border-right:1px solid $grey1;
+  cursor:pointer;
+}
+
+.chat > section:first-of-type{
+  border-left:none !important;
+}
+
+.chat .chat-messages{
+  opacity:.45;
+}
+
+
+//Width Change for different chat count
+
+.chat > section{ width: 30%; }
+.chat.four > section{ width: 20%; }
+.chat.five > section{ width: 16.25%; }
+.chat.six > section{ width: 14%; }
+
+
+.chat section.is-focused{
+  max-width:650px;
+  opacity:1;
+  font-size:.9rem;
+  cursor:default;
+}
+
+//Focused chat sizes
+.chat > section.is-focused{ width: calc(40% - #{$navWidth} ); }
+.chat.five > section.is-focused{ width: calc(35% - #{$navWidth} ); }
+
+
